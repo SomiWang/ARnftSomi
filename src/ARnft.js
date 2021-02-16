@@ -151,10 +151,19 @@ export default class ARnft {
         plane.scale.set(scaleX, scaleY, scaleZ)
         document.addEventListener('getNFTData', (ev) => {
             var msg = ev.detail
-            plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
-            plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
+            if (window.innerWidth < window.innerHeight) {
+                plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
+                plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
+                //console.log("AAAAAAAAA");
+            }
+            else
+            {
+                plane.position.x = (msg.height / msg.dpi * 2.54 * 10) / 2.0
+                plane.position.y = (msg.width / msg.dpi * 2.54 * 10) / 2.0
+                //console.log("BBBBBBBBB");
+            }
             if (ARVideo.paused) ARVideo.play()
-        })       
+        })
         root.add(plane)
     }
 
