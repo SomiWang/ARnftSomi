@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Somi ARnft Test03</title>
+    <title>Somi ARnft Test04</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=1">
     <link rel="stylesheet" href="css/nft-style.css">
 </head>
@@ -29,6 +29,7 @@
     <script src="../dist/ARnft.js"></script>
 
     <script>
+        screen.lockOrientation('Portrait');
         ARnft.ARnft.init(640, 480, "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/SomiWang/ARPostcardJs/master/data/dataNFT/Postcard/Postcard", 'config.json', true)
             .then((nft) => {
                 nft.addVideo('arvideo', 155, 110, 0.1);
