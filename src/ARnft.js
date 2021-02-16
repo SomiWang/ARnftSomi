@@ -140,7 +140,7 @@ export default class ARnft {
         root.add(plane)
     }
 
-    addVideo(id, scaleX,scaleY,scaleZ) {
+    addVideo(id, scaleX, scaleY, scaleZ) {
         const root = this.root
         var ARVideo = document.getElementById(id)
         var texture = new THREE.VideoTexture(ARVideo)
@@ -153,6 +153,13 @@ export default class ARnft {
             var msg = ev.detail
             plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
             plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
+            if (ARVideo.paused) ARVideo.play()
+        })
+        window.addEventListener('orientationchange', function () {
+            var msg = ev.detail
+            plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
+            plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
+            if (ARVideo.paused) ARVideo.play()
         })
         root.add(plane)
     }
