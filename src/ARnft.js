@@ -11,7 +11,7 @@ export default class ARnft {
         this.height = height
         this.root = new THREE.Object3D()
         this.renderer = null
-        this.root.matrixAutoUpdate = false
+        this.root.matrixAutoUpdate = true
         this.config = config
         this.listeners = {}
         this.version = '0.8.4'
@@ -31,7 +31,7 @@ export default class ARnft {
 
         data.then((configData) => {
             Container.createLoading(configData)
-            Container.createStats(stats)
+            //Container.createStats(stats)
             const containerObj = Container.createContainer()
             const container = containerObj.container
             const canvas = containerObj.canvas
@@ -151,17 +151,8 @@ export default class ARnft {
         plane.scale.set(scaleX, scaleY, scaleZ)
         document.addEventListener('getNFTData', (ev) => {
             var msg = ev.detail
-            if (window.innerWidth < window.innerHeight) {
-                plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
-                plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
-                //console.log("AAAAAAAAA");
-            }
-            else
-            {
-                plane.position.x = (msg.height / msg.dpi * 2.54 * 10) / 2.0
-                plane.position.y = (msg.width / msg.dpi * 2.54 * 10) / 2.0
-                //console.log("BBBBBBBBB");
-            }
+            plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
+            plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
             if (ARVideo.paused) ARVideo.play()
         })
         root.add(plane)
