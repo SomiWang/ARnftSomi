@@ -154,11 +154,6 @@ export default class ARnft {
             plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
             plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
         })
-        window.addEventListener('orientationchange', function () {
-            var msg = ev.detail
-            plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
-            plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
-        })
         root.add(plane)
     }
 
