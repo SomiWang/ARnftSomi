@@ -11,7 +11,7 @@ export default class ARnft {
         this.height = height
         this.root = new THREE.Object3D()
         this.renderer = null
-        this.root.matrixAutoUpdate = true
+        this.root.matrixAutoUpdate = false
         this.config = config
         this.listeners = {}
         this.version = '0.8.4'
