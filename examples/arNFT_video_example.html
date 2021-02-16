@@ -29,7 +29,7 @@
     <script src="../dist/ARnft.js"></script>
 
     <script>
-        screen.lockOrientation('Portrait');
+        Screen.lockOrientation('Portrait');
         ARnft.ARnft.init(640, 480, "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/SomiWang/ARPostcardJs/master/data/dataNFT/Postcard/Postcard", 'config.json', true)
             .then((nft) => {
                 nft.addVideo('arvideo', 155, 110, 0.1);
