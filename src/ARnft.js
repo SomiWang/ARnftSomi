@@ -153,10 +153,17 @@ export default class ARnft {
             var msg = ev.detail
             plane.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0
             plane.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0
-            if (ARVideo.paused) ARVideo.play()
+           
+        })
+
+        document.body.addEventListener('click',()=>
+        {
+          console.log("AAAAAAAA");
+         if (ARVideo.paused)  ARVideo.play()
+         else ARVideo.stop()        
         })
         root.add(plane)
-    }
+    } 
 
     dispatchEvent(event) {
         const listeners = this.listeners[event.name]
