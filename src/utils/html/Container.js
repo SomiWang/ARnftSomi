@@ -50,8 +50,6 @@ export default class Container {
     logo.src = configData.loading.logo.src
     logo.alt = configData.loading.logo.alt
     const loadingMessage = document.createElement('span')
-    const endLoadingMsg = document.createElement('endLoadingMsg')
-    endLoadingMsg.id='endLoadingMessage'
     loadingMessage.setAttribute('class', 'loading-text')
     loadingMessage.innerText = configData.loading.loadingMessage
     loader.appendChild(logo)
