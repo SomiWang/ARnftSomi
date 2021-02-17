@@ -160,7 +160,11 @@ export default class ARnft {
         {
           console.log("AAAAAAAA");
          if (ARVideo.paused)  ARVideo.play()
-         else ARVideo.stop()        
+         else 
+         {
+          ARVideo.pause()        
+          ARVideo.currentTime=0
+         }
         })
         root.add(plane)
     } 
