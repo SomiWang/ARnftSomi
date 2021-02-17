@@ -199,7 +199,7 @@ export default class Utils {
               // removing loader page if present
               const loader = document.getElementById('loading')
               if (loader) {
-                loader.querySelector('.loading-text').innerText = '\u5c07\u93e1\u982d\u5c0d\u6e96\u660e\u4fe1\u7247'//將鏡頭對準明信片
+                loader.querySelector('.loading-text').innerText = configData.loading.endLoadingMessage
                 setTimeout(function () {
                   loader.parentElement.removeChild(loader)
                 }, 2000)
