@@ -14,10 +14,10 @@
   },
   "loading": {
     "logo": {
-      "src": "Data/arNFT-logo.gif",
+      "src": "Data/Chunghwa_Post_Logo.svg.png",
       "alt": "arNFT.js logo"
     },
-    "loadingMessage": "Loading, please wait..."
+    "loadingMessage": "\u8b80\u53d6\u4e2d..."
   },
   "renderer": {
     "type": "three",
