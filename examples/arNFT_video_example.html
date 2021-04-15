@@ -21,7 +21,7 @@
            playsinline
            crossOrigin="anonymous"
            id="arvideo">
-        <source src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/SomiWang/ARnftSomi/master/examples/Data/Polaroid_008.mp4" type='video/mp4'>
+        <source src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/SomiWang/ARnftSomi/master/examples/Data/Polaroid_1080.mp4" type='video/mp4'>
     </video>
 
     <script src="js/third_party/three.js/three.min.js"></script>
@@ -29,7 +29,7 @@
 
     <script>        
 
-        ARnft.ARnft.init(360, 360, "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/SomiWang/ARnftSomi/master/examples/DataNFT/Polaroid/Polaroid_nft", 'config.json', false)
+        ARnft.ARnft.init(288, 288, "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/SomiWang/ARnftSomi/master/examples/DataNFT/Polaroid/Polaroid_nft", 'config.json', false)
             .then((nft) => {
                 nft.addVideo('arvideo', 155, 110, 0.1);
             }).catch((error) => {
